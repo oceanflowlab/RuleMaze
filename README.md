@@ -47,14 +47,14 @@ RuleMaze currently supports two scene types:
 
 ## News and TODOs
 
-- [ ] Release public dataset download links.
+- [x] Release public dataset download links.
 - [ ] Release pretrained RuleMaze model checkpoints.
-- [ ] Release paper and project-page links.
+- [x] Release paper and project-page links.
 
 
 ## Data Download
 
-Coming soon.
+The RuleMaze dataset is available on Hugging Face: [Fish-03/RuleMaze](https://huggingface.co/datasets/Fish-03/RuleMaze).
 
 ## Installation
 
