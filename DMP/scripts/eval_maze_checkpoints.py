@@ -45,7 +45,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-reset-rounds",
         type=int,
-        default=0,
+        default=3,
         help="Maximum per-sample reset/retry rounds inside each checkpoint evaluation.",
     )
     return parser.parse_args()

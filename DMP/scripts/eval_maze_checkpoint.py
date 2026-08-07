@@ -63,7 +63,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-reset-rounds",
         type=int,
-        default=0,
+        default=3,
         help="Maximum per-sample reset/retry rounds. Failed maze samples are rerun in later rounds.",
     )
     return parser.parse_args()

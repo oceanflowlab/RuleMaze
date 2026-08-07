@@ -212,7 +212,8 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 llamafactory-cli train \
 CUDA_VISIBLE_DEVICES=0 python scripts/eval_maze_checkpoints.py \
   --predict-yaml examples/inference/qwen25vl_3b_maze_lora_predict_both.yaml \
   --checkpoint-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_sft_both_50 \
-  --output-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_checkpoint_eval_both
+  --output-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_checkpoint_eval_both \
+  --max-reset-rounds 3
 ```
 
 Training takes approximately 12 hours on 4 RTX 4090 GPUs.
@@ -342,7 +343,8 @@ Evaluate all checkpoints:
 CUDA_VISIBLE_DEVICES=0 python scripts/eval_maze_checkpoints.py \
   --predict-yaml examples/inference/qwen25vl_3b_maze_lora_predict_both.yaml \
   --checkpoint-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_sft_both_50 \
-  --output-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_checkpoint_eval_both
+  --output-root ../DATA/Training_Result/qwen2.5-vl-3b/lora/maze_checkpoint_eval_both \
+  --max-reset-rounds 3
 ```
 
 Each checkpoint evaluation directory contains:
@@ -391,7 +393,7 @@ Evaluation metrics include exact step match, maze-level exact match, prefix prog
 
 ## Acknowledgements
 
-
+This work was supported by the grants from the National Natural Science Foundation of China 62372014 and Beijing Nova Program.
 
 ## Citation
 
@@ -400,7 +402,7 @@ If you find RuleMaze useful for your research, please cite our work:
 ```bibtex
 @misc{rulemaze,
   title  = {Rule-Compliant Visual Spatial Planning for Multimodal Large Language Models},
-  author = {Chen, Yu and Lei, Ting and Li, Yaoyi and Cai, Jia and Wu, Zhecen and Liu, Yang},
+  author = {Yu Chen, Ting Lei, Yaoyi Li, Jia Cai, Zhecen Wu and Yang Liu},
   year   = {2026},
   note   = {Code and dataset release}
 }
