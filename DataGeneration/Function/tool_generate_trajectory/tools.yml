@@ -1,0 +1,41 @@
+locate_start:
+  thought: "First, I need to locate the starting cell in the maze image using the start legend image."
+  short_code:
+    locate_starting_point()
+  code:
+    cur_bounded_pos_img = locate_starting_point(maze_image, start_cell_img)
+  observation: "starting position is bounded with blue circle as current position in image variable 'cur_bounded_pos_img'."
+
+move_and_bound:
+  thought: "Next, I will move {move_actions} from current position."
+  short_code:
+    move_and_bound()
+  code:
+    cur_bounded_pos_img = move(cur_bounded_pos_img, move_actions, maze_image)
+  observation: "After moving {move_actions} from previous position, current position is bounded with blue circle and updated in image variable <cur_bounded_pos_img>."
+
+current_position_is_special_cell:
+  thought: Next, I need to check if the current position is a special cell using the normal cell image.
+  short_code:
+    check_special_cell()
+  code:
+    is_special_cell, state = current_position_is_special_cell(maze_image, cur_bounded_pos_img, normal_cell_img)
+  observation: "Is the current position a special cell?: {is_special_cell}\nState of the current position is: {state}"
+
+verify_reach_endpoint:
+  thought: Now, I will verify if the current position has reached the endpoint using the end legend image.
+  short_code:
+    verify_endpoint()
+  code:
+    reached_end = verify_reach_endpoint()
+  observation: "Has the current position reached the endpoint?: {reached_end}"
+
+verify_move_validity_based_on_rules:
+  thought: Now, I will verify the move validity based on the provided rules and action sequence with states.
+  short_code:
+    verify_move_validity()
+  code:
+    action_seq_with_states = {action_sequence_with_states}
+    str_rules = "{str_rules}"
+    is_valid_move_sequence = verify_move_validity_based_on_rules(action_seq_with_states, str_rules)
+  observation: "Is the move sequence valid?: {is_valid_move_sequence}"

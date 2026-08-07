@@ -1,0 +1,15 @@
+{
+    "Easy": {
+        "Train": [1,2],
+        "Test": [3]
+    },
+    
+    "Medium": {
+        "Train": [1,2],
+        "Test": [3]
+    },
+    "Hard": {
+        "Train": [1,2],
+        "Test": [3]
+    }
+}

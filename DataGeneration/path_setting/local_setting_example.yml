@@ -1,0 +1,89 @@
+BASED_DIR: <absolute path to the directory where the RuleMaze project is located>
+MODEL_DIR: <absolute path to the directory where the models are stored>
+MODEL_NAME:
+    QWEN: Qwen/Qwen2.5-VL-3B-Instruct
+    CLIP: AI-ModelScope/clip-vit-large-patch14
+
+# All generated artifacts are stored under BASED_DIR/DATA.
+DATA_ROOT_DIR: DATA
+
+# Maze and Rule Generation related paths
+MAZE_GENERATION_DIR: Generate_rule_maze
+MAZE_POOL_DIR: Mazes_Pool
+MAZE_SIZE: 3
+NUM_MAZES: 30000
+NUM_PROCESSES: 10
+RULES_SAVED_PATH: maze_navigation_rules.json
+
+RULE_SETS_DIR: rule_sets
+VALIDATOR_CODE_DIR: maze_navigation_rules/rules_w_code
+VALIDATOR_CODE_DIR_NAME: code
+VALIDATOR_CODE_FILE_NAME: rules_checking_code_new.py
+RULE_WITH_CODE_SUFFIX: _with_code.json
+MATCHED_MAZES_DIR_NAME: matched_mazes
+MATCHED_MAZES_DIR_TEMPLATE: "{matched_mazes_dir_name}_{maze_size}"
+MATCHED_MAZES_FILE_TEMPLATE: "{file_name}.json"
+RULE_SET_DIR_TEMPLATE: "rule_set_{rule_index}"
+MAZE_IMAGES_DIR_NAME: maze_images
+MAZE_SIZE_DIR_TEMPLATE: "maze_size_{maze_size}"
+MAZE_POOL_DIFFICULTY_DIR_TEMPLATE: "{difficulty}_{loop_percent}"
+GENERATED_MAZES_DIR_TEMPLATE: "generated_mazes_{count_start}_{count_end}"
+GENERATED_MAZES_FILE_TEMPLATE: "generated_mazes_{count_start}_{count_end}.json"
+MAZE_BATCH_FILE_TEMPLATE: "{batch_dir}.json"
+MAZE_IMAGE_FILE_TEMPLATE: "maze_{maze_index}.png"
+SCENE_DIR:
+    regular: regular_scene
+    quest: quest_scene
+
+REGULAR_LEGEND_DIR: legend_images/regular
+GRID_LEGEND_DIR: legend_images/grid
+QUEST_LEGEND_DIR: legend_images/legend
+QUEST_TEST_MAZE_DIR: test_img/quest/maze
+QUEST_TEST_OUTPUT_DIR: test_img/quest/output
+QUEST_NORMAL_CELL_IMAGE_NAME: maze_bg.png
+QUEST_TEST_MAZE_IMAGE_NAME: maze_1.png
+QUEST_TEST_MOVE_IMAGE_NAME: maze_1_move_up_up_right_right.png
+VALIDATOR_CODE_FILES:
+    regular:
+        - Easy_with_code.json
+        - Medium_with_code.json
+        - Hard_with_code.json
+    quest:
+        - Easy_with_code.json
+        - Medium_with_code.json
+        - Hard_with_code.json
+
+
+# RuleMaze dataset related paths
+RULEMAZE_DATASET_DIR: RuleMaze_Dataset
+MAZE_DATA_PATH: matched_mazes
+TRAINING_DATASET_REF: separate_regular.json
+RAW_TRAIN_TEST_DIR_NAME: raw_train_test_data
+COMBINE_DATASETS_DIR_NAME: process_datasets
+TRAIN_SAMPLES_PER_RULE: 200
+TEST_SAMPLES_PER_DIFFICULTY: 100
+SAVED_RAW_TRAIN_DATA_FILE_NAME: saved_raw_train_data.json
+SAVED_RAW_TEST_DATA_FILE_NAME: saved_raw_test_data.json
+DATASET_SPLIT_FILE_TEMPLATE: "{dataset_type}_{difficulty}.json"
+COMBINED_TRAIN_DATASET_FILE_NAME: combined_train_all_difficulties.json
+COMBINED_TEST_UNSEEN_DATASET_FILE_NAME: combined_test_unseen_all_difficulties.json
+COMBINED_TEST_SEEN_DATASET_FILE_NAME: combined_test_seen_all_difficulties.json
+TRAJECTORIES_DIR_NAME: trajectories
+TRAJECTORY_STEP_IMAGE_PATH_TEMPLATE: "{maze_index}/{rule_path}/{correctness}/step_{step_id}.png"
+TRAJECTORY_FILE_SUFFIX: "_trajectories_without_code_thought.jsonl"
+TRAJECTORY_WITH_STEP_IMAGES_SUFFIX: "_traj_with_step_images.jsonl"
+
+# Stage 3: DMP conversion, training dataset, and training result paths
+DMP_DIR: DMP
+DMP_DATA_DIR: ../DATA/Training_Data
+DMP_TRAINING_RESULT_DIR: ../DATA/Training_Result
+DMP_DATASET_INFO_FILE_NAME: dataset_info.json
+DMP_TRAIN_SFT_FILE_NAME: maze_train_stepwise_sft.json
+DMP_TEST_UNSEEN_SFT_FILE_NAME: maze_test_unseen_stepwise_sft.json
+DMP_TEST_SEEN_SFT_FILE_NAME: maze_test_seen_stepwise_sft.json
+DMP_TRAIN_DATASET_NAME: maze_train_stepwise_sft
+DMP_TEST_UNSEEN_DATASET_NAME: maze_test_unseen_stepwise_sft
+DMP_TEST_SEEN_DATASET_NAME: maze_test_seen_stepwise_sft
+
+# API key file (relative to DataGeneration root)
+APIKEY_PATH: Generate_rule_maze/apikey.yaml
