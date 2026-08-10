@@ -1,6 +1,7 @@
 # Rule-Compliant Visual Spatial Planning for Multimodal Large Language Models
 
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-blue)](https://huggingface.co/datasets/Fish-03/RuleMaze)
+[![Model](https://img.shields.io/badge/Model-Hugging%20Face-orange)](https://huggingface.co/Fish-03/RuleMaze)
 [![Paper](https://img.shields.io/badge/Paper-Project%20Page-green)](https://fish-03.github.io/RULEMAZE/paper)
 [![Demo Page](https://img.shields.io/badge/Demo%20Page-Online-purple)](https://fish-03.github.io/RULEMAZE/)
 
@@ -48,13 +49,15 @@ RuleMaze currently supports two scene types:
 ## News and TODOs
 
 - [x] Release public dataset download links.
-- [ ] Release pretrained RuleMaze model checkpoints.
+- [x] Release pretrained RuleMaze model checkpoints.
 - [x] Release paper and project-page links.
 
 
 ## Data Download
 
 The RuleMaze dataset is available on Hugging Face: [Fish-03/RuleMaze](https://huggingface.co/datasets/Fish-03/RuleMaze).
+
+The pretrained RuleMaze model checkpoint is available on Hugging Face: [Fish-03/RuleMaze](https://huggingface.co/Fish-03/RuleMaze).
 
 ## Installation
 
