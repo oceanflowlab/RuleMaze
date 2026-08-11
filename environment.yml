@@ -1,0 +1,40 @@
+# Reconstructed from /home/leiting/.conda/envs/llamafactory on 2026-08-11.
+# The PyTorch wheel is a CUDA 12.8 build; the host NVIDIA driver must support it.
+name: llamafactory
+channels:
+  - defaults
+dependencies:
+  - python=3.11.15
+  - pip=26.0.1
+  - pip:
+      # Core training stack observed in the original environment.
+      - torch==2.10.0
+      - torchvision==0.25.0
+      - torchaudio==2.10.0
+      - torchdata==0.11.0
+      - transformers==5.2.0
+      - datasets==4.0.0
+      - accelerate==1.11.0
+      - peft==0.18.1
+      - trl==0.24.0
+      - deepspeed==0.18.4
+      - wandb==0.25.1
+
+      # Multimodal/data dependencies used by Qwen2.5-VL and LLaMA-Factory.
+      - pillow==11.3.0
+      - av==16.0.0
+      - numpy==2.4.3
+      - scipy==1.17.1
+      - sentencepiece==0.2.1
+      - tiktoken==0.12.0
+      - tokenizers==0.22.2
+      - safetensors==0.7.0
+      - protobuf==6.33.6
+
+      # Text evaluation/tokenization utilities used by RuleMaze.
+      - jieba
+      - nltk
+      - rouge-chinese
+
+      # Pin LLaMA-Factory to the source revision used by this handoff.
+      - "llamafactory @ git+https://github.com/hiyouga/LLaMA-Factory.git@246192abd2371d9729cb8cf256061d0a070517d4"

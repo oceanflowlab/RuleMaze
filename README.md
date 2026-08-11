@@ -63,7 +63,7 @@ The pretrained RuleMaze model checkpoint is available on Hugging Face: [Fish-03/
 
 ### Requirements
 
-- Python 3.10+
+- Python 3.11
 - Conda
 - LLaMA-Factory for stage-3 SFT training and prediction
 
@@ -73,17 +73,17 @@ The pretrained RuleMaze model checkpoint is available on Hugging Face: [Fish-03/
 git clone <repo_url>
 cd RULEMAZE
 
-conda create -n rulemaze python=3.10 -y
-conda activate rulemaze
+conda env create -f environment.yml
+conda activate llamafactory
 ```
 
-Install the Python dependencies required by your environment. If your release package includes a `requirements.txt`, run:
+If you already have a compatible Conda environment and only need the Python packages, install the merged pip requirements instead:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Stage-3 training and prediction use [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory). Please install LLaMA-Factory before running SFT or checkpoint evaluation.
+Stage-3 training and prediction use [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), which is included in `environment.yml` and `requirements.txt`. If you manage dependencies manually, make sure LLaMA-Factory is installed before running SFT or checkpoint evaluation.
 
 ## Configuration
 
