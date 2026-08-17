@@ -1,6 +1,6 @@
 # Reconstructed from /home/leiting/.conda/envs/llamafactory on 2026-08-11.
 # The PyTorch wheel is a CUDA 12.8 build; the host NVIDIA driver must support it.
-name: llamafactory
+name: rulemaze
 channels:
   - defaults
 dependencies:

@@ -74,7 +74,7 @@ git clone <repo_url>
 cd RULEMAZE
 
 conda env create -f environment.yml
-conda activate llamafactory
+conda activate rulemaze
 ```
 
 If you already have a compatible Conda environment and only need the Python packages, install the merged pip requirements instead:
