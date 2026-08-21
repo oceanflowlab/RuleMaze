@@ -2,8 +2,8 @@
 
 [![Dataset](https://img.shields.io/badge/Dataset-Hugging%20Face-blue)](https://huggingface.co/datasets/Fish-03/RuleMaze)
 [![Model](https://img.shields.io/badge/Model-Hugging%20Face-orange)](https://huggingface.co/Fish-03/RuleMaze)
-[![Paper](https://img.shields.io/badge/Paper-Project%20Page-green)](https://fish-03.github.io/RULEMAZE/paper)
-[![Demo Page](https://img.shields.io/badge/Demo%20Page-Online-purple)](https://fish-03.github.io/RULEMAZE/)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-green)](https://arxiv.org/abs/2608.20237)
+[![Project Page](https://img.shields.io/badge/Project%20Page-Online-purple)](https://fish-03.github.io/RULEMAZE/)
 
 Official implementation for **RuleMaze**, a controllable benchmark and training pipeline for studying rule-compliant visual spatial planning in multimodal large language models (MLLMs).
 
